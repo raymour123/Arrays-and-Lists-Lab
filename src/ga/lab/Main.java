@@ -1,136 +1,191 @@
 package ga.lab;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
-// This is obviously not finished but I have been making some great strides and will complete it over the weekend //
-    // I just need to get some sleep before I tackle this paper rock scissors project tomorrow//
-    public static void main(String[] args) {
+
+    public static void main(String[] args){
 
         String charString;
-        double summedDoubles;
+        double sumOfDoubles;
         int middleValue;
 
         //Problem 1:
-        String[] stringLengthOrValue = new String[4];
-
         stringLengthOrValue("I said");
         stringLengthOrValue("hey");
         stringLengthOrValue("whats up?");
         stringLengthOrValue("hello!");
-    }
-
-    public static void stringLengthOrValue(String y) {
-        if (y.length() > 5) {
-            System.out.println(y);
-        } else {
-            System.out.println(y.length());
-        }
-    }
-
-
-        int length = stringLengthOrValue.length;
-
-        System.out.println(stringLengthOrValue[0].length());
-        System.out.println(stringLengthOrValue[1].length());
-        System.out.println(stringLengthOrValue[2].length());
-        System.out.println(stringLengthOrValue[3].length());
-
-        for (int i = 0; i <= stringLengthOrValue.length - 1; i++){
-            stringLengthOrValue[i] = i;
-        }
-*/
-
 
         //Problem 2:
         reversedOrder();
-    }
 
-    public static void reversedOrder() {
-
-        int[] reversedOrder = new int[10];
-
-        for (int i = 0; i < reversedOrder.length - 1; i++) {
-            reversedOrder[i] = i;
-
-
-            for (int i = reversedOrder.length -1; i >= 0; i--){
-                System.out.println(reversedOrder[i]);
-            }
-
-        }
-    }
-
-}
-
-
-/**
         //Problem 3:
-        int[] maxValue = new int [];
-
         maxValue(new int[]{2, 52, 7, 91, 10, 12});
         maxValue(new int[]{12, 1, 11});
         maxValue(new int[]{0, 14});
         maxValue(new int[]{100, 23, 29, 101, 1});
 
-        for (i = 0; i < maxValue.length; i++) {
-        if (maxValue[i] > largest) {
-        largest = maxValue[i];
-        system.out.println(largest);
-/**
         //Problem 4:
 
-        _____ = sumOfValues(new double[]{12.1, 13.9, 7.0});
+        summedDoubles = sumOfValues(new double[]{12.1, 13.9, 7.0});
+        System.out.println(summedDoubles);
         //how do we print a variable to the command line
 
-        _____ = sumOfValues(new double[]{1.23, 2.09, 9.2});
+        summedDoubles = sumOfValues(new double[]{1.23, 2.09, 9.2});
+        System.out.println(summedDoubles);
         //how do we print a variable to the command line
 
-        _____ = sumOfValues(new double[]{1.01, 15.1, 22.27, 19.99});
+        summedDoubles = sumOfValues(new double[]{1.01, 15.1, 22.27, 19.99});
+        System.out.println(summedDoubles);
         //how do we print a variable to the command line
 
-        _____ = sumOfValues(new double[]{3.08, 4.1, 7.2, 3.0});
+        summedDoubles = sumOfValues(new double[]{3.08, 4.1, 7.2, 3.0});
+        System.out.println(summedDoubles);
         //how do we print a variable to the command line
 
 
         //Problem 5:
-        _____ = charsToString(new char[]{'h', 'e', 'l', 'l', 'o'});
+        charString = charsToString(new char[]{'h', 'e', 'l', 'l', 'o'});
+        System.out.println(charString);
         //how do we print a variable to the command line
 
-        _____ = charsToString(new char[]{'t', 'h', 'e', 'r', 'e', '!'});
+        charString = charsToString(new char[]{'t', 'h', 'e', 'r', 'e', '!'});
+        System.out.println(charString);
         //how do we print a variable to the command line
 
-        _____ = charsToString(new char[]{'I', ' ', 'a','m', ' '});
+        charString = charsToString(new char[]{'I', ' ', 'a','m', ' '});
+        System.out.println(charString);
         //how do we print a variable to the command line
 
-        _____ = charsToString(new char[]{'A', ' ', 'S', 't', 'r', 'i', 'n', 'g', '.'});
+        charString = charsToString(new char[]{'A', ' ', 'S', 't', 'r', 'i', 'n', 'g', '.'});
+        System.out.println(charString);
         //how do we print a variable to the command line
 
         //Problem 6:
-        //Put your code for problem 6 here
+        List<String> myStringList = new ArrayList<>();
+        myStringList.add("This");
+        myStringList.add("is");
+        myStringList.add("my");
+        myStringList.add("first");
+        myStringList.add("list!");
 
         //Problem 7:
-        reversedStringOrder(/*use the List you created in problem 6*);
+        reversedStringOrder(myStringList);
 
         //Problem 8:
-        printOrAdd(/*use the List you created in problem 6*///);
-/**
+        printOrAdd(myStringList);
+
         //Problem 9:
-        //Create an int array of an odd size, with the variable name 'oddSizedArray'
-        //Make sure the size is at least 5.
+        int[] oddSizedArray = new int[7];
+        for (int i = 0; i < oddSizedArray.length; i++){
+            oddSizedArray[i] = (int) (Math.random() * 100);
+        }
 
         //Problem 10:
-        findMiddle(/*use the array you created in problem 9*///);
- /**       //how do we print a variable to the command line
-
-        findMiddle(new int[]{2,7,9,12,15});
+        System.out.println(findMiddle(oddSizedArray));
         //how do we print a variable to the command line
 
-        findMiddle(new int[]{13, 91, 27, 99, 14, 36, 10});
+        System.out.println(findMiddle(new int[]{2,7,9,12,15}));
         //how do we print a variable to the command line
 
-        findMiddle(new int[]{100, 1, 45, 1092, 76, 12, 34, 11, 145});
-        //how do we print a variable to the command line **/
+        System.out.println(findMiddle(new int[]{13, 91, 27, 99, 14, 36, 10}));
+        //how do we print a variable to the command line
 
+        System.out.println(findMiddle(new int[]{100, 1, 45, 1092, 76, 12, 34, 11, 145}));
+        //how do we print a variable to the command line
 
+    }
+    
+// function 1
+    public static void stringLengthOrValue(String stringLOV){
 
-    //declare your functions
+        if (stringLOV.length() > 5){
+            System.out.println(stringLOV);
+        }
+        else {
+            System.out.println(stringLOV.length());
+        }
+    }
+
+    // function 2
+    public static void reversedOrder(){
+
+        int[] intArray2 = new int[10];
+        for (int i = 0; i < intArray2.length; i++){
+            intArray2[i] = i;
+        }
+        for (int i = intArray2.length-1; i >= 0; i--){
+            System.out.println(intArray2[i]);
+        }
+    }
+
+    // function 3
+    public static void maxValue(int[] intArray3){
+
+        int value3 = intArray3[0];
+        for (int i = 0; i < intArray3.length; i++){
+            if (intArray3[i] > value3) {
+                value3 = intArray3[i];
+            }
+        }
+        System.out.println(value3);
+    }
+
+    // function 4
+    public static double sumOfValues(double[] doubleArray4){
+
+        double value4 = 0.0;
+        for (int i = 0; i < doubleArray4.length; i++){
+            value4 = value4 + doubleArray4[i];
+        }
+        return value4;
+    }
+
+    // function 5
+    public static String charsToString(char[] charArray5){
+
+        String stringOfChars = "";
+        for (int i = 0; i < charArray5.length; i++){
+            stringOfChars = stringOfChars + charArray5[i];
+        }
+        return stringOfChars;
+    }
+
+    // function 7
+    public static void reversedStringOrder(List<String> list7){
+
+        for (int i = list7.size()-1; i >= 0; i--){
+            System.out.println(list7.get(i));
+        }
+    }
+
+    // function 8
+    public static void printOrAdd(List<String> list8){
+
+        if (list8.size() >= 10){
+            for (int i = 0; i < list8.size(); i++){
+                System.out.println(list8.get(i));
+            }
+        }
+        else {
+            for (int i = list8.size(); i < 10; i++){
+                list8.add("Java" + (list8.size() + 1));
+            }
+            for (int i = 0; i < list8.size(); i++){
+                System.out.println(list8.get(i));
+            }
+        }
+    }
+
+    // function 10
+    public static int findMiddle(int[] intArray10){
+
+        int middleNumber = (intArray10.length / 2);
+        int middleValue = intArray10[middleNumber];
+        return middleValue;
+
+    }
+
+}
 
